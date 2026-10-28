@@ -47,7 +47,7 @@
     searchOverlay.setAttribute('aria-hidden', String(!open));
     searchToggle.setAttribute('aria-expanded', String(open));
     document.body.style.overflow = open ? 'hidden' : '';
-    if (open) setTimeout(() => searchInput.focus(), 150);
+    if (open) searchInput.focus({ preventScroll: true });
     else searchToggle.focus();
   }
   searchToggle.addEventListener('click', (e) => { e.stopPropagation(); setSearch(true); });
