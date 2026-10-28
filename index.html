@@ -217,21 +217,11 @@
 <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search" aria-hidden="true">
   <button class="search-overlay__close" id="searchClose" aria-label="Close search"><svg class="ic"><use href="#i-close"/></svg></button>
   <div class="container search-overlay__inner">
-    <span class="eyebrow">Search alfanar Power</span>
     <form class="search-overlay__form" role="search" onsubmit="return false;">
       <svg class="ic search-overlay__ic"><use href="#i-search"/></svg>
       <input type="search" id="searchInput" placeholder="Search projects, solutions, insights…" aria-label="Search the site" autocomplete="off">
       <button type="submit" class="btn btn--primary">Search <svg class="ic"><use href="#i-arrow-right"/></svg></button>
     </form>
-    <div class="search-overlay__popular">
-      <span>Popular:</span>
-      <a href="#solutions">Solar Power</a>
-      <a href="#solutions">Wind Turbines</a>
-      <a href="#solutions">Hybrid Power</a>
-      <a href="#solutions">EPC Solutions</a>
-      <a href="#projects">Lighthouse Green Fuels</a>
-    </div>
-    <p class="search-overlay__hint">Press <kbd>Esc</kbd> to close</p>
   </div>
 </div>
 
@@ -563,6 +553,7 @@
 
 <!-- ============ PROJECTS ============ -->
 <section class="projects section section--dark" id="projects">
+  <span class="projects__deco projects__deco--rings" aria-hidden="true"></span>
   <div class="container">
     <div class="section-head section-head--center">
       <span class="eyebrow eyebrow--light reveal">Recent Projects</span>
