@@ -37,6 +37,28 @@
   });
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
+  /* ---------- Full-page search overlay ---------- */
+  const searchOverlay = $('#searchOverlay');
+  const searchToggle = $('#searchToggle');
+  const searchInput = $('#searchInput');
+
+  function setSearch(open) {
+    searchOverlay.classList.toggle('is-open', open);
+    searchOverlay.setAttribute('aria-hidden', String(!open));
+    searchToggle.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) setTimeout(() => searchInput.focus(), 150);
+    else searchToggle.focus();
+  }
+  searchToggle.addEventListener('click', (e) => { e.stopPropagation(); setSearch(true); });
+  $('#searchClose').addEventListener('click', () => setSearch(false));
+  searchOverlay.addEventListener('click', (e) => {
+    if (e.target === searchOverlay || e.target.closest('.search-overlay__popular a')) setSearch(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && searchOverlay.classList.contains('is-open')) setSearch(false);
+  });
+
   /* ---------- Desktop dropdown + mega menu (click to open) ---------- */
   const menus = $$('[data-menu]');
   const backdrop = $('#navBackdrop');
