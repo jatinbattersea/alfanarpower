@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>alfanar Power | Clean Power for a Brighter Future</title>
+  <meta name="description" content="alfanar Power, a new alfanar Group company, develops, builds, owns and operates clean power: solar, wind turbines, renewable energy, hybrid plants and EPC.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <symbol id="i-solar" viewBox="0 0 24 24"><path d="M8 2a4 4 0 1 0 8 0M4 3h1m14 0h1m-8 6v1m5.2-2.8l.707.707M6.8 7.2l-.7.7M4.28 21h15.44a1 1 0 0 0 .97-1.243l-1.5-6a1 1 0 0 0-.97-.757H5.78a1 1 0 0 0-.97.757l-1.5 6A1 1 0 0 0 4.28 21M4 17h16m-10-4l-1 8m5-8l1 8"/></symbol>
+    <symbol id="i-turbine" viewBox="0 0 24 24"><path d="M10 11a2 2 0 1 0 4 0a2 2 0 1 0-4 0"/><path d="M10 11V8.427q0-.27.04-.536l.716-4.828C10.82 2.466 11.353 2 12 2s1.18.466 1.244 1.063l.716 4.828q.04.267.04.536V11"/><path d="m13.01 9.28l2.235 1.276q.234.135.446.3l3.836 2.911c.487.352.624 1.04.3 1.596c-.325.556-1 .782-1.548.541l-4.555-1.68a4 4 0 0 1-.486-.231l-2.235-1.277"/><path d="m13 12.716l-2.236 1.277a4 4 0 0 1-.485.23l-4.555 1.681c-.551.241-1.223.015-1.548-.54c-.324-.557-.187-1.245.3-1.597l3.836-2.91a3.4 3.4 0 0 1 .446-.3l2.235-1.277M7 21h10m-7 0l1-7m2 0l1 7"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M5 21c.5-4.5 2.5-8 7-10"/><path d="M9 18c6.218 0 10.5-3.288 11-12V4h-4.014c-9 0-11.986 4-12 9c0 1 0 3 2 5z"/></symbol>
+    <symbol id="i-hybrid" viewBox="0 0 24 24"><path d="M4 6.28v11.44a1 1 0 0 0 1.243.97l6-1.5a1 1 0 0 0 .757-.97V7.78a1 1 0 0 0-.757-.97l-6-1.5A1 1 0 0 0 4 6.28M8 6v12m4-6H4m16-5l-3 5h4l-3 5"/></symbol>
+    <symbol id="i-helmet" viewBox="0 0 24 24"><path d="M6 21h6m-3 0V3L3 9h18M9 3l10 6"/><path d="M17 9v4a2 2 0 1 1-2 2"/></symbol>
+    <symbol id="i-lighthouse" viewBox="0 0 24 24"><path d="M12 3V2m4.066 14.865L7 22l2-11V6a3 3 0 0 1 6 0v5l2 11m2.792-17.5l.866-.5m-.861 9.5l.866.5M21 9h1M3 9H2m2.203 4.5l-.866.5m.871-9.5L3.342 4M5.5 22h13M7.932 16.875l7.377-4.178M8 11h8M8 7h8"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3v7h6l-8 11v-7H5z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m3 7l9 6l9-6"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/><path d="M17.657 16.657L13.414 20.9a2 2 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0"/><path d="M12 7v5l3 3"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14m-6 6l6-6m-6-6l6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M5 12h14M5 12l6 6m-6-6l6-6"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M17 7L7 17M8 7h9v9"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="m9 12l2 2l4-4"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M6 4v16a1 1 0 0 0 1.524.852l13-8a1 1 0 0 0 0-1.704l-13-8A1 1 0 0 0 6 4"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14m-7-7h14"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6"/></symbol>
+    <symbol id="i-world" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0-18 0m.6-3h16.8M3.6 15h16.8"/><path d="M11.5 3a17 17 0 0 0 0 18m1-18a17 17 0 0 1 0 18"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M11.46 20.846A12 12 0 0 1 3.5 6A12 12 0 0 0 12 3a12 12 0 0 0 8.5 3a12 12 0 0 1-.09 7.06M15 19l2 2l4-4"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M6.94 5a2 2 0 1 1-4-.002a2 2 0 0 1 4 .002M7 8.48H3V21h4zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.930c0-6.17-7.06-5.94-8.72-2.91z"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="m17.687 3.063l-4.996 5.711l-4.32-5.711H2.112l7.477 9.776l-7.086 8.099h3.034l5.469-6.25l4.78 6.25h6.102l-7.794-10.304l6.625-7.571zm-1.064 16.06L5.654 4.782h1.803l10.846 14.34z"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.244 4c.534.003 1.87.016 3.29.073l.504.022c1.429.067 2.857.183 3.566.38c.945.266 1.687 1.04 1.938 2.022c.4 1.56.45 4.602.456 5.339l.001.152v.174c-.007.737-.057 3.78-.457 5.339c-.254.985-.997 1.760-1.938 2.022c-.709.197-2.137.313-3.566.38l-.504.023c-1.42.056-2.756.07-3.29.072l-.235.001h-.255c-1.13-.007-5.856-.058-7.36-.476c-.944-.266-1.687-1.04-1.938-2.022c-.4-1.56-.45-4.602-.456-5.339v-.326c.006-.737.056-3.78.456-5.339c.254-.985.997-1.76 1.939-2.021c1.503-.419 6.23-.47 7.36-.476zM9.999 8.5v7l6-3.5z"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.790-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.770-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="m6 9l6 6l6-6"/></symbol>
+    <symbol id="i-factory" viewBox="0 0 24 24"><path d="M3 21h18M5 21V9l5 4V9l5 4h4"/><path d="M19 21v-8l-1.436-9.574A.5.5 0 0 0 17.069 3h-1.145a.5.5 0 0 0-.494.418L14 12m-5 5h1m4 0h1"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0-4 0m-2 8v-1a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1M15 5a2 2 0 1 0 4 0a2 2 0 0 0-4 0m2 5h2a2 2 0 0 1 2 2v1M5 5a2 2 0 1 0 4 0a2 2 0 0 0-4 0m-2 8v-1a2 2 0 0 1 2-2h2"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 0 12 0A6 6 0 1 0 6 9"/><path d="m12 15l3.4 5.89l1.598-3.233l3.598.232l-3.4-5.889M6.802 12l-3.4 5.89L7 17.657l1.598 3.232l3.4-5.889"/></symbol>
+    <symbol id="i-plane" viewBox="0 0 24 24"><path d="m14.639 10.258l4.83-1.294a2 2 0 1 1 1.035 3.863L6.015 16.71l-4.45-5.02l2.897-.776l2.45 1.414l2.897-.776l-3.743-6.244l2.898-.777zM3 21h18"/></symbol>
+    <symbol id="i-hydrogen" viewBox="0 0 24 24"><path d="M21 3.6v16.8a.6.6 0 0 1-.6.6H3.6a.6.6 0 0 1-.6-.6V3.6a.6.6 0 0 1 .6-.6h16.8a.6.6 0 0 1 .6.6M10 8v4m0 4v-4m0 0h4m0 0V8m0 4v4"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><path d="M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2m0 9l2 2l4-4"/></symbol>
+    <symbol id="i-cog" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066-2.573c-.94-1.543.826-3.31 2.37-2.37c1 .608 2.296.07 2.572-1.065"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0-6 0"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M10 14L21 3m0 0l-6.5 18a.55.55 0 0 1-1 0L10 14l-7-3.5a.55.55 0 0 1 0-1z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><path d="M3 19a2 2 0 1 0 4 0a2 2 0 0 0-4 0M19 7a2 2 0 1 0 0-4a2 2 0 0 0 0 4m-8 12h5.5a3.5 3.5 0 0 0 0-7h-8a3.5 3.5 0 0 1 0-7H13"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><path d="m8 16l2-6l6-2l-2 6z"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0m9-9v2m0 14v2m-9-9h2m14 0h2"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0-8 0m-5 0h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7l-.7.7m0 11.4l.7.7m-12.1-.7l-.7.7"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <ul class="topbar__info">
+      <li><svg class="ic"><use href="#i-pin"/></svg> Riyadh, Saudi Arabia</li>
+      <li><svg class="ic"><use href="#i-mail"/></svg> <a href="mailto:info@alfanarpower.com">info@alfanarpower.com</a></li>
+      <li class="hide-md"><svg class="ic"><use href="#i-clock"/></svg> Sun – Thu: 08:00 – 17:00</li>
+    </ul>
+    <div class="topbar__right">
+      <ul class="social social--sm">
+        <li><a href="#" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a></li>
+        <li><a href="#" aria-label="X"><svg class="ic"><use href="#i-x"/></svg></a></li>
+        <li><a href="#" aria-label="YouTube"><svg class="ic"><use href="#i-youtube"/></svg></a></li>
+        <li><a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-instagram"/></svg></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#" class="brand" aria-label="alfanar Power home">
+      <img src="assets/img/logo.png" alt="alfanar Power" class="brand__logo" width="1089" height="399">
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main">
+      <ul class="nav__list">
+        <li class="nav__item is-active"><a href="#">Home</a></li>
+        <li class="nav__item has-drop" data-menu>
+          <button class="nav__toggle" aria-expanded="false" aria-controls="dd-about">About Us <svg class="ic ic--xs"><use href="#i-chevron-down"/></svg></button>
+          <div class="dropdown" id="dd-about">
+            <a href="#about"><svg class="ic"><use href="#i-lighthouse"/></svg> Who We Are</a>
+            <a href="#about"><svg class="ic"><use href="#i-factory"/></svg> alfanar Group</a>
+            <a href="#about"><svg class="ic"><use href="#i-users"/></svg> Leadership</a>
+            <a href="#about"><svg class="ic"><use href="#i-leaf"/></svg> Sustainability</a>
+            <a href="#about"><svg class="ic"><use href="#i-award"/></svg> Careers</a>
+          </div>
+        </li>
+        <li class="nav__item has-mega" data-menu>
+          <button class="nav__toggle" aria-expanded="false" aria-controls="mega-solutions">Solutions <svg class="ic ic--xs"><use href="#i-chevron-down"/></svg></button>
+          <div class="mega" id="mega-solutions">
+            <div class="container mega__inner">
+              <div class="mega__intro">
+                <svg class="ic mega__intro-bg" aria-hidden="true"><use href="#i-lighthouse"/></svg>
+                <span class="eyebrow eyebrow--light">Our Solutions</span>
+                <h3>Clean Power, Engineered End to End</h3>
+                <p>Five integrated capabilities that take a project from first survey to decades of operation.</p>
+                <div class="mega__stat"><strong>1.75 GW</strong><span>Renewable projects across 5 countries</span></div>
+                <a href="#solutions" class="btn btn--lime btn--sm">View All Solutions <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+              </div>
+
+              <div class="mega__links">
+                <a href="#solutions" class="mega__link is-current"
+                   data-img="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=700&h=760&q=75"
+                   data-tag="110 MW + 50 MW" data-text="Utility-scale PV engineered for desert heat, with plants in Saudi Arabia and Egypt.">
+                  <span class="mega__ic"><svg class="ic"><use href="#i-solar"/></svg></span>
+                  <span class="mega__txt"><strong>Solar Power</strong><small>Utility-scale PV plants</small></span>
+                  <svg class="ic mega__arrow"><use href="#i-arrow-up-right"/></svg>
+                </a>
+                <a href="#solutions" class="mega__link"
+                   data-img="https://images.unsplash.com/photo-1508791290064-c27cc1ef7a9a?auto=format&fit=crop&w=700&h=760&q=75"
+                   data-tag="600 MW in India" data-text="Onshore wind farms and turbine manufacturing through Senvion India.">
+                  <span class="mega__ic"><svg class="ic"><use href="#i-turbine"/></svg></span>
+                  <span class="mega__txt"><strong>Wind Turbines</strong><small>Onshore wind &amp; manufacturing</small></span>
+                  <svg class="ic mega__arrow"><use href="#i-arrow-up-right"/></svg>
+                </a>
+                <a href="#solutions" class="mega__link"
+                   data-img="https://images.unsplash.com/photo-1593182440709-4b7b56482c55?auto=format&fit=crop&w=700&h=760&q=75"
+                   data-tag="Green Fuels · UK" data-text="Green hydrogen and sustainable aviation fuel, led by Lighthouse Green Fuels.">
+                  <span class="mega__ic"><svg class="ic"><use href="#i-leaf"/></svg></span>
+                  <span class="mega__txt"><strong>Renewable Energy</strong><small>Green hydrogen &amp; e-fuels</small></span>
+                  <svg class="ic mega__arrow"><use href="#i-arrow-up-right"/></svg>
+                </a>
+                <a href="#solutions" class="mega__link"
+                   data-img="https://images.unsplash.com/photo-1762381157076-4872b31961e0?auto=format&fit=crop&w=700&h=760&q=75"
+                   data-tag="Solar + Wind + Storage" data-text="Hybrid plants that combine technologies into firm, round-the-clock clean power.">
+                  <span class="mega__ic"><svg class="ic"><use href="#i-hybrid"/></svg></span>
+                  <span class="mega__txt"><strong>Hybrid Power</strong><small>Solar + wind + storage</small></span>
+                  <svg class="ic mega__arrow"><use href="#i-arrow-up-right"/></svg>
+                </a>
+                <a href="#solutions" class="mega__link"
+                   data-img="https://images.unsplash.com/photo-1652303518379-c0ef1c9fb2b1?auto=format&fit=crop&w=700&h=760&q=75"
+                   data-tag="Turnkey Delivery" data-text="Engineering, procurement and construction backed by the alfanar Group supply chain.">
+                  <span class="mega__ic"><svg class="ic"><use href="#i-helmet"/></svg></span>
+                  <span class="mega__txt"><strong>EPC Solutions</strong><small>Engineer, procure, construct</small></span>
+                  <svg class="ic mega__arrow"><use href="#i-arrow-up-right"/></svg>
+                </a>
+              </div>
+
+              <div class="mega__preview" aria-live="polite">
+                <img id="megaImg" src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=700&h=760&q=75" alt="">
+                <div class="mega__preview-body">
+                  <span class="tag tag--lime" id="megaTag">110 MW + 50 MW</span>
+                  <h4 id="megaTitle">Solar Power</h4>
+                  <p id="megaText">Utility-scale PV engineered for desert heat, with plants in Saudi Arabia and Egypt.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav__item"><a href="#projects">Projects</a></li>
+        <li class="nav__item"><a href="#footprint">Global Presence</a></li>
+        <li class="nav__item"><a href="#insights">Insights</a></li>
+        <li class="nav__item"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__actions">
+      <button class="icon-btn" aria-label="Search"><svg class="ic"><use href="#i-search"/></svg></button>
+      <a href="#contact" class="btn btn--primary btn--sm hide-sm">Get a Quote <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      <button class="icon-btn icon-btn--menu" id="menuToggle" aria-label="Open menu" aria-expanded="false"><svg class="ic"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile off-canvas -->
+<div class="offcanvas" id="offcanvas" aria-hidden="true">
+  <div class="offcanvas__panel">
+    <div class="offcanvas__head">
+      <img src="assets/img/logo.png" alt="alfanar Power" class="offcanvas__logo" width="1089" height="399">
+      <button class="icon-btn" id="menuClose" aria-label="Close menu"><svg class="ic"><use href="#i-close"/></svg></button>
+    </div>
+    <ul class="offcanvas__nav">
+      <li><a href="#">Home</a></li>
+      <li class="offcanvas__sub">
+        <button class="offcanvas__toggle" aria-expanded="false">About Us <svg class="ic"><use href="#i-chevron-down"/></svg></button>
+        <div class="offcanvas__subwrap"><ul class="offcanvas__subnav">
+          <li><a href="#about">Who We Are</a></li>
+          <li><a href="#about">alfanar Group</a></li>
+          <li><a href="#about">Leadership</a></li>
+          <li><a href="#about">Sustainability</a></li>
+          <li><a href="#about">Careers</a></li>
+        </ul></div>
+      </li>
+      <li class="offcanvas__sub">
+        <button class="offcanvas__toggle" aria-expanded="false">Solutions <svg class="ic"><use href="#i-chevron-down"/></svg></button>
+        <div class="offcanvas__subwrap"><ul class="offcanvas__subnav">
+          <li><a href="#solutions"><svg class="ic"><use href="#i-solar"/></svg> Solar Power</a></li>
+          <li><a href="#solutions"><svg class="ic"><use href="#i-turbine"/></svg> Wind Turbines</a></li>
+          <li><a href="#solutions"><svg class="ic"><use href="#i-leaf"/></svg> Renewable Energy</a></li>
+          <li><a href="#solutions"><svg class="ic"><use href="#i-hybrid"/></svg> Hybrid Power</a></li>
+          <li><a href="#solutions"><svg class="ic"><use href="#i-helmet"/></svg> EPC Solutions</a></li>
+        </ul></div>
+      </li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#footprint">Global Presence</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn--primary btn--block">Get a Quote <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+  </div>
+</div>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<main>
+
+<!-- ============ HERO SLIDER ============ -->
+<section class="hero" id="hero">
+  <div class="hero__slides">
+    <div class="hero__slide is-active" data-title="Wind Power" data-thumb="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=240&h=160&q=70" style="--bg:url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=2000&q=80')">
+      <div class="container hero__content">
+        <span class="eyebrow eyebrow--light"><svg class="ic"><use href="#i-bolt"/></svg> Developer · EPC · Independent Power Producer</span>
+        <h1 class="hero__title">Powering the Energy Transition at <span class="hl">Utility Scale</span></h1>
+        <p class="hero__text">alfanar Power develops, builds, owns and operates wind, solar and green hydrogen projects, backed by 1.75 GW of renewable experience across five countries.</p>
+        <div class="hero__btns">
+          <a href="#solutions" class="btn btn--lime">Explore Solutions <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+          <a href="#about" class="btn btn--ghost">About alfanar Power</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__slide" data-title="Utility-Scale Solar" data-thumb="https://images.unsplash.com/photo-1641959166358-6d08825fb88f?auto=format&fit=crop&w=240&h=160&q=70" style="--bg:url('https://images.unsplash.com/photo-1641959166358-6d08825fb88f?auto=format&fit=crop&w=2000&q=80')">
+      <div class="container hero__content">
+        <span class="eyebrow eyebrow--light"><svg class="ic"><use href="#i-solar"/></svg> Solar Power</span>
+        <h1 class="hero__title">Solar Plants Built for <span class="hl">Desert Conditions</span></h1>
+        <p class="hero__text">Utility-scale PV engineered for high heat and high yield, with a 110 MW plant in Saudi Arabia and 50 MW in Egypt.</p>
+        <div class="hero__btns">
+          <a href="#projects" class="btn btn--lime">View Projects <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+          <a href="#contact" class="btn btn--ghost">Talk to Our Team</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero__slide" data-title="Hybrid &amp; EPC" data-thumb="https://images.unsplash.com/photo-1762381157076-4872b31961e0?auto=format&fit=crop&w=240&h=160&q=70" style="--bg:url('https://images.unsplash.com/photo-1762381157076-4872b31961e0?auto=format&fit=crop&w=2000&q=80')">
+      <div class="container hero__content">
+        <span class="eyebrow eyebrow--light"><svg class="ic"><use href="#i-hybrid"/></svg> Hybrid &amp; EPC</span>
+        <h1 class="hero__title">One Partner from <span class="hl">Design to Delivery</span></h1>
+        <p class="hero__text">Solar, wind and storage combined into firm clean power, engineered, procured and built by a single accountable team.</p>
+        <div class="hero__btns">
+          <a href="#solutions" class="btn btn--lime">Our Capabilities <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+          <a href="#contact" class="btn btn--ghost">Request a Proposal</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container hero__nav-wrap">
+    <button class="hero__next" id="heroNext" aria-label="Next slide">
+      <span class="hero__next-thumb"><img id="heroNextImg" src="https://images.unsplash.com/photo-1641959166358-6d08825fb88f?auto=format&fit=crop&w=240&h=160&q=70" alt=""></span>
+      <span class="hero__next-txt">
+        <small>Up next <b id="heroNextNo">02</b><i>/ 03</i></small>
+        <strong id="heroNextTitle">Utility-Scale Solar</strong>
+      </span>
+      <span class="hero__next-ring">
+        <svg viewBox="0 0 52 52" aria-hidden="true"><circle class="hero__ring-track" cx="26" cy="26" r="23"/><circle class="hero__ring-prog" id="heroRing" cx="26" cy="26" r="23"/></svg>
+        <svg class="ic"><use href="#i-arrow-right"/></svg>
+      </span>
+    </button>
+  </div>
+</section>
+
+<!-- ============ FEATURE STRIP ============ -->
+<section class="features">
+  <div class="container features__grid">
+    <article class="feature reveal">
+      <span class="feature__ic"><svg class="ic"><use href="#i-compass"/></svg></span>
+      <h3>Develop</h3>
+      <p>Site origination, permitting and grid studies for utility-scale clean power.</p>
+      <span class="feature__num">01</span>
+    </article>
+    <article class="feature reveal" data-delay="1">
+      <span class="feature__ic"><svg class="ic"><use href="#i-helmet"/></svg></span>
+      <h3>Build</h3>
+      <p>Full EPC delivery backed by alfanar's in-house electrical manufacturing.</p>
+      <span class="feature__num">02</span>
+    </article>
+    <article class="feature reveal" data-delay="2">
+      <span class="feature__ic"><svg class="ic"><use href="#i-shield"/></svg></span>
+      <h3>Own</h3>
+      <p>Long-term investment as an independent power producer in every market.</p>
+      <span class="feature__num">03</span>
+    </article>
+    <article class="feature reveal" data-delay="3">
+      <span class="feature__ic"><svg class="ic"><use href="#i-cog"/></svg></span>
+      <h3>Operate</h3>
+      <p>Lifecycle O&amp;M that keeps assets performing for decades.</p>
+      <span class="feature__num">04</span>
+    </article>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about section" id="about">
+  <div class="container about__grid">
+    <div class="about__media reveal">
+      <div class="about__img about__img--main">
+        <img src="https://images.unsplash.com/photo-1726221062299-88f27b653c59?auto=format&fit=crop&w=900&q=80" alt="Engineer inspecting a solar plant" loading="lazy">
+      </div>
+      <div class="about__img about__img--sub">
+        <img src="https://images.unsplash.com/photo-1777811950974-18d3b5032e4b?auto=format&fit=crop&w=600&q=80" alt="Wind turbine against the sky" loading="lazy">
+      </div>
+      <div class="about__badge">
+        <svg class="about__ring" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="ringPath" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#ringPath" textLength="486" lengthAdjust="spacing">ENGINEERING SINCE 1976 • ALFANAR GROUP •</textPath></text>
+        </svg>
+        <div class="about__badge-core"><strong>45+</strong><span>Years</span></div>
+      </div>
+    </div>
+
+    <div class="about__content">
+      <span class="eyebrow reveal">About alfanar Power</span>
+      <h2 class="section-title reveal">A New Light in Clean Power, Backed by Five Decades of Delivery</h2>
+      <p class="lead reveal">alfanar Power is the newest company of the alfanar Group, the Riyadh-based industrial group founded in 1976. Our name means "lighthouse" in Arabic, and our purpose follows from it: guide the energy transition with dependable, clean power.</p>
+      <p class="reveal">We build on the renewables track record of alfanar Projects across Saudi Arabia, Egypt, India, Spain and the UK, covering solar, wind and green hydrogen, with 1.75 GW of renewable projects to date.</p>
+
+      <div class="about__stats reveal">
+        <div class="mini-stat">
+          <span class="mini-stat__ic"><svg class="ic"><use href="#i-bolt"/></svg></span>
+          <div><strong>1.75 GW</strong><span>Renewable projects</span></div>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-stat__ic mini-stat__ic--cyan"><svg class="ic"><use href="#i-world"/></svg></span>
+          <div><strong>5 Countries</strong><span>Clean power footprint</span></div>
+        </div>
+      </div>
+
+      <ul class="checklist reveal">
+        <li><svg class="ic"><use href="#i-check"/></svg> Developer, EPC contractor and long-term owner</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Wind turbine manufacturing through Senvion India</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Pioneering sustainable aviation fuel in the UK</li>
+      </ul>
+
+      <div class="about__cta reveal">
+        <a href="#solutions" class="btn btn--primary">Discover More <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        <a href="tel:+966110000000" class="call">
+          <span class="call__ic"><svg class="ic"><use href="#i-phone"/></svg></span>
+          <span><small>Call us anytime</small><strong>+966 11 000 0000</strong></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOLUTIONS ============ -->
+<section class="services section section--gray" id="solutions">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="eyebrow reveal">What We Offer</span>
+        <h2 class="section-title reveal">Complete Clean Power Solutions</h2>
+      </div>
+      <p class="section-head__side reveal">Five integrated capabilities that take a project from first survey to decades of operation, delivered by one accountable partner.</p>
+    </div>
+
+    <div class="offer-grid">
+      <article class="offer reveal">
+        <div class="offer__media">
+          <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=800&q=80" alt="Aerial view of a solar farm" loading="lazy">
+        </div>
+        <div class="offer__body">
+          <span class="offer__ic"><svg class="ic"><use href="#i-solar"/></svg></span>
+          <h3>Solar Power</h3>
+          <p>Utility-scale photovoltaic plants engineered for desert heat and high yield, from 50 MW to multi-hundred-megawatt sites.</p>
+          <ul class="offer__tags"><li>Utility-scale PV</li><li>Grid integration</li></ul>
+          <a href="#" class="offer__link">Learn More <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article class="offer reveal" data-delay="1">
+        <div class="offer__media">
+          <img src="https://images.unsplash.com/photo-1508791290064-c27cc1ef7a9a?auto=format&fit=crop&w=800&q=80" alt="Wind turbines on rolling hills" loading="lazy">
+        </div>
+        <div class="offer__body">
+          <span class="offer__ic"><svg class="ic"><use href="#i-turbine"/></svg></span>
+          <h3>Wind Turbines</h3>
+          <p>Onshore wind farms and turbine manufacturing through Senvion India, from blade to grid connection.</p>
+          <ul class="offer__tags"><li>Onshore wind</li><li>Senvion India</li></ul>
+          <a href="#" class="offer__link">Learn More <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article class="offer reveal">
+        <div class="offer__media">
+          <img src="https://images.unsplash.com/photo-1586366461834-d2d65d725a2e?auto=format&fit=crop&w=800&q=80" alt="Rows of solar panels on a green field" loading="lazy">
+        </div>
+        <div class="offer__body">
+          <span class="offer__ic"><svg class="ic"><use href="#i-leaf"/></svg></span>
+          <h3>Renewable Energy</h3>
+          <p>Green hydrogen and e-fuels that decarbonise hard-to-abate sectors such as aviation and heavy industry.</p>
+          <ul class="offer__tags"><li>Green hydrogen</li><li>Sustainable aviation fuel</li></ul>
+          <a href="#" class="offer__link">Learn More <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article class="offer reveal" data-delay="1">
+        <div class="offer__media">
+          <img src="https://images.unsplash.com/photo-1762381157076-4872b31961e0?auto=format&fit=crop&w=800&q=80" alt="Wind turbines and solar panels in farmland" loading="lazy">
+        </div>
+        <div class="offer__body">
+          <span class="offer__ic"><svg class="ic"><use href="#i-hybrid"/></svg></span>
+          <h3>Hybrid Power</h3>
+          <p>Solar, wind and battery storage combined into firm, dispatchable renewable supply that grids can rely on.</p>
+          <ul class="offer__tags"><li>Solar + wind</li><li>Battery storage</li></ul>
+          <a href="#" class="offer__link">Learn More <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article class="offer reveal" data-delay="2">
+        <div class="offer__media">
+          <img src="https://images.unsplash.com/photo-1652303518379-c0ef1c9fb2b1?auto=format&fit=crop&w=800&h=600&q=80" alt="Site engineers reviewing an excavation" loading="lazy">
+        </div>
+        <div class="offer__body">
+          <span class="offer__ic"><svg class="ic"><use href="#i-helmet"/></svg></span>
+          <h3>EPC Solutions</h3>
+          <p>Turnkey engineering, procurement and construction, backed by alfanar's group manufacturing and supply chain.</p>
+          <ul class="offer__tags"><li>Engineering</li><li>Procurement</li><li>Construction</li></ul>
+          <a href="#" class="offer__link">Learn More <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+
+      <article class="offer-cta reveal" data-delay="2">
+        <span class="offer-cta__ic"><svg class="ic"><use href="#i-bolt"/></svg></span>
+        <h3>Need More Than One Technology?</h3>
+        <p>We design integrated projects that combine solar, wind, storage and green fuels, delivered end to end under one EPC contract.</p>
+        <ul class="offer-cta__list">
+          <li><svg class="ic"><use href="#i-check"/></svg> One partner, one contract</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Develop, build, own &amp; operate</li>
+        </ul>
+        <a href="#contact" class="btn btn--lime btn--sm">Talk to an Expert <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Solar</span><svg class="ic"><use href="#i-sun"/></svg>
+    <span>Wind Turbines</span><svg class="ic"><use href="#i-turbine"/></svg>
+    <span>Renewable Energy</span><svg class="ic"><use href="#i-leaf"/></svg>
+    <span>Hybrid Power</span><svg class="ic"><use href="#i-hybrid"/></svg>
+    <span>EPC</span><svg class="ic"><use href="#i-helmet"/></svg>
+    <span>Green Hydrogen</span><svg class="ic"><use href="#i-hydrogen"/></svg>
+    <span>Solar</span><svg class="ic"><use href="#i-sun"/></svg>
+    <span>Wind Turbines</span><svg class="ic"><use href="#i-turbine"/></svg>
+    <span>Renewable Energy</span><svg class="ic"><use href="#i-leaf"/></svg>
+    <span>Hybrid Power</span><svg class="ic"><use href="#i-hybrid"/></svg>
+    <span>EPC</span><svg class="ic"><use href="#i-helmet"/></svg>
+    <span>Green Hydrogen</span><svg class="ic"><use href="#i-hydrogen"/></svg>
+  </div>
+</div>
+
+<!-- ============ COUNTERS ============ -->
+<section class="counters" style="--bg:url('https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=2000&q=80')">
+  <div class="container">
+    <div class="counters__head">
+      <div>
+        <span class="eyebrow eyebrow--light reveal">The Strength of alfanar</span>
+        <h2 class="section-title section-title--light reveal">Group Scale Behind Every Megawatt We Deliver</h2>
+      </div>
+      <a href="#about" class="video-btn reveal" aria-label="Watch our story">
+        <span class="video-btn__circle"><svg class="ic"><use href="#i-play"/></svg></span>
+        <span>Watch Our Story</span>
+      </a>
+    </div>
+    <div class="counters__grid">
+      <div class="counter reveal">
+        <svg class="ic counter__ic"><use href="#i-award"/></svg>
+        <strong><span class="count" data-to="45">0</span><small>+</small></strong>
+        <span>Years of Engineering Experience</span>
+      </div>
+      <div class="counter reveal" data-delay="1">
+        <svg class="ic counter__ic"><use href="#i-clipboard"/></svg>
+        <strong><span class="count" data-to="500">0</span><small>+</small></strong>
+        <span>Projects Delivered</span>
+      </div>
+      <div class="counter reveal" data-delay="2">
+        <svg class="ic counter__ic"><use href="#i-world"/></svg>
+        <strong><span class="count" data-to="8">0</span><small>+</small></strong>
+        <span>Countries of Operation</span>
+      </div>
+      <div class="counter reveal" data-delay="3">
+        <svg class="ic counter__ic"><use href="#i-bolt"/></svg>
+        <strong><span class="count" data-to="1.75" data-dec="2">0</span><small>GW</small></strong>
+        <span>Renewable Projects</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="why section">
+  <div class="container why__grid">
+    <div class="why__content">
+      <span class="eyebrow reveal">Why alfanar Power</span>
+      <h2 class="section-title reveal">Building a Sustainable Future, Across the Whole Value Chain</h2>
+      <p class="lead reveal">Few renewable players can develop, manufacture, build and operate under one group. That integration means fewer interfaces, tighter schedules and assets built to perform.</p>
+      <div class="why__list">
+        <div class="why-item reveal">
+          <span class="why-item__ic"><svg class="ic"><use href="#i-factory"/></svg></span>
+          <div><h3>In-house Manufacturing</h3><p>Switchgear, cables and wind turbines from alfanar Electric and Senvion India.</p></div>
+        </div>
+        <div class="why-item reveal" data-delay="1">
+          <span class="why-item__ic"><svg class="ic"><use href="#i-shield"/></svg></span>
+          <div><h3>Bankable Delivery</h3><p>A 500+ project record that lenders and offtakers trust.</p></div>
+        </div>
+        <div class="why-item reveal" data-delay="2">
+          <span class="why-item__ic"><svg class="ic"><use href="#i-route"/></svg></span>
+          <div><h3>Full Lifecycle</h3><p>From origination to O&amp;M, one partner accountable for results.</p></div>
+        </div>
+        <div class="why-item reveal" data-delay="3">
+          <span class="why-item__ic"><svg class="ic"><use href="#i-users"/></svg></span>
+          <div><h3>Local Talent</h3><p>Building national capability in every market we enter.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="why__media reveal">
+      <img src="https://images.unsplash.com/photo-1726221062287-fda475b85493?auto=format&fit=crop&w=1000&q=80" alt="Engineer reviewing a solar installation" loading="lazy">
+      <div class="why__card">
+        <span class="why__card-ic"><svg class="ic"><use href="#i-turbine"/></svg></span>
+        <div><strong>600 MW</strong><span>Wind capacity in India</span></div>
+      </div>
+      <a href="#" class="why__play" aria-label="Play video"><svg class="ic"><use href="#i-play"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section class="projects section section--dark" id="projects">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow eyebrow--light reveal">Recent Projects</span>
+      <h2 class="section-title section-title--light reveal">Our Clean Power Portfolio</h2>
+    </div>
+
+    <div class="filters reveal" id="filters">
+      <button class="is-active" data-filter="all">All Projects</button>
+      <button data-filter="wind">Wind</button>
+      <button data-filter="solar">Solar</button>
+      <button data-filter="fuels">Green Fuels</button>
+    </div>
+
+    <div class="projects__grid" id="projectGrid">
+      <article class="project project--tall" data-cat="wind">
+        <img src="https://images.unsplash.com/photo-1565085360602-de694f1d7650?auto=format&fit=crop&w=900&q=80" alt="Wind turbines at dusk" loading="lazy">
+        <div class="project__info">
+          <span class="tag tag--lime">Wind · 300 MW</span>
+          <h3>Wind Farm, India</h3>
+          <p><svg class="ic"><use href="#i-pin"/></svg> India</p>
+          <a href="#" class="project__go" aria-label="View project"><svg class="ic"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </article>
+      <article class="project" data-cat="solar">
+        <img src="https://images.unsplash.com/photo-1674606071893-2a9023075f70?auto=format&fit=crop&w=900&q=80" alt="Large solar array in a desert" loading="lazy">
+        <div class="project__info">
+          <span class="tag tag--lime">Solar · 110 MW</span>
+          <h3>Solar PV Plant</h3>
+          <p><svg class="ic"><use href="#i-pin"/></svg> Saudi Arabia</p>
+          <a href="#" class="project__go" aria-label="View project"><svg class="ic"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </article>
+      <article class="project project--tall" data-cat="wind">
+        <img src="https://images.unsplash.com/photo-1777811950974-18d3b5032e4b?auto=format&fit=crop&w=900&q=80" alt="Close-up of a wind turbine" loading="lazy">
+        <div class="project__info">
+          <span class="tag tag--lime">Turbine Manufacturing</span>
+          <h3>Senvion India</h3>
+          <p><svg class="ic"><use href="#i-pin"/></svg> India</p>
+          <a href="#" class="project__go" aria-label="View project"><svg class="ic"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </article>
+      <article class="project project--tall" data-cat="fuels">
+        <img src="https://images.unsplash.com/photo-1593182440709-4b7b56482c55?auto=format&fit=crop&w=900&q=80" alt="Aircraft wing above the clouds" loading="lazy">
+        <div class="project__info">
+          <span class="tag tag--lime">Sustainable Aviation Fuel</span>
+          <h3>Lighthouse Green Fuels</h3>
+          <p><svg class="ic"><use href="#i-pin"/></svg> United Kingdom</p>
+          <a href="#" class="project__go" aria-label="View project"><svg class="ic"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </article>
+      <article class="project" data-cat="wind">
+        <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=900&q=80" alt="Wind farm at sunset" loading="lazy">
+        <div class="project__info">
+          <span class="tag tag--lime">Wind · 300 MW</span>
+          <h3>Wind Farm, India</h3>
+          <p><svg class="ic"><use href="#i-pin"/></svg> India</p>
+          <a href="#" class="project__go" aria-label="View project"><svg class="ic"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </article>
+      <article class="project" data-cat="solar">
+        <img src="https://images.unsplash.com/photo-1629726797843-618688139f5a?auto=format&fit=crop&w=900&q=80" alt="Solar plant in farmland" loading="lazy">
+        <div class="project__info">
+          <span class="tag tag--lime">Solar · 50 MW</span>
+          <h3>Solar PV Plant</h3>
+          <p><svg class="ic"><use href="#i-pin"/></svg> Egypt</p>
+          <a href="#" class="project__go" aria-label="View project"><svg class="ic"><use href="#i-arrow-up-right"/></svg></a>
+        </div>
+      </article>
+    </div>
+
+    <div class="center-btn reveal">
+      <a href="#" class="btn btn--lime">View All Projects <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process section">
+  <div class="container">
+    <div class="section-head section-head--center">
+      <span class="eyebrow reveal">Work Flow</span>
+      <h2 class="section-title reveal">How We Bring Clean Power to Life</h2>
+    </div>
+    <div class="process__grid" data-line>
+      <div class="step reveal">
+        <div class="step__circle"><svg class="ic"><use href="#i-compass"/></svg><span class="step__no">01</span></div>
+        <h3>Origination &amp; Development</h3>
+        <p>Resource assessment, land, permits and grid connection agreements.</p>
+      </div>
+      <div class="step reveal" data-delay="1">
+        <div class="step__circle"><svg class="ic"><use href="#i-clipboard"/></svg><span class="step__no">02</span></div>
+        <h3>Engineering &amp; Procurement</h3>
+        <p>Optimised design and a group supply chain that cuts lead times.</p>
+      </div>
+      <div class="step reveal" data-delay="2">
+        <div class="step__circle"><svg class="ic"><use href="#i-helmet"/></svg><span class="step__no">03</span></div>
+        <h3>Construction &amp; Commissioning</h3>
+        <p>Safe, on-schedule delivery and energisation of every asset.</p>
+      </div>
+      <div class="step reveal" data-delay="3">
+        <div class="step__circle"><svg class="ic"><use href="#i-bolt"/></svg><span class="step__no">04</span></div>
+        <h3>Ownership &amp; Operations</h3>
+        <p>Long-term asset management maximising clean generation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTPRINT ============ -->
+<section class="footprint section section--blue" id="footprint">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="eyebrow eyebrow--light reveal">Global Presence</span>
+        <h2 class="section-title section-title--light reveal">Clean Power Across Five Countries</h2>
+      </div>
+      <p class="section-head__side section-head__side--light reveal">Headquartered in Riyadh, alfanar's renewable work spans three continents and every major clean power technology.</p>
+    </div>
+    <div class="footprint__grid">
+      <div class="country reveal">
+        <span class="country__code">SA</span>
+        <h3>Saudi Arabia</h3>
+        <p>Headquarters · Solar PV</p>
+        <span class="country__ic"><svg class="ic"><use href="#i-solar"/></svg></span>
+      </div>
+      <div class="country reveal" data-delay="1">
+        <span class="country__code">EG</span>
+        <h3>Egypt</h3>
+        <p>Solar PV</p>
+        <span class="country__ic"><svg class="ic"><use href="#i-sun"/></svg></span>
+      </div>
+      <div class="country reveal" data-delay="2">
+        <span class="country__code">IN</span>
+        <h3>India</h3>
+        <p>Wind farms · Senvion India</p>
+        <span class="country__ic"><svg class="ic"><use href="#i-turbine"/></svg></span>
+      </div>
+      <div class="country reveal" data-delay="3">
+        <span class="country__code">ES</span>
+        <h3>Spain</h3>
+        <p>Solar &amp; wind</p>
+        <span class="country__ic"><svg class="ic"><use href="#i-hybrid"/></svg></span>
+      </div>
+      <div class="country reveal" data-delay="4">
+        <span class="country__code">UK</span>
+        <h3>United Kingdom</h3>
+        <p>Green fuels · Hydrogen</p>
+        <span class="country__ic"><svg class="ic"><use href="#i-plane"/></svg></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ + QUOTE ============ -->
+<section class="faq section" id="contact">
+  <div class="container faq__grid">
+    <div class="faq__content">
+      <span class="eyebrow reveal">Helpful FAQs</span>
+      <h2 class="section-title reveal">Questions Partners Often Ask Us</h2>
+      <div class="accordion reveal" id="accordion">
+        <div class="acc-item is-open">
+          <button class="acc-item__head">What does alfanar Power do?<span class="acc-item__ic"><svg class="ic"><use href="#i-plus"/></svg></span></button>
+          <div class="acc-item__body"><p>We develop, build, own and operate clean power assets, including solar, wind, hybrid and green hydrogen, and offer full EPC services to partners.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-item__head">How is alfanar Power related to alfanar Group?<span class="acc-item__ic"><svg class="ic"><use href="#i-plus"/></svg></span></button>
+          <div class="acc-item__body"><p>alfanar Power is a new company of the alfanar Group, alongside alfanar Electric, alfanar Building Systems and alfanar Projects.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-item__head">Which technologies do you work with?<span class="acc-item__ic"><svg class="ic"><use href="#i-plus"/></svg></span></button>
+          <div class="acc-item__body"><p>Utility-scale solar PV, onshore wind (including turbine manufacturing via Senvion India), hybrid solar-wind-storage plants and green hydrogen-based fuels.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-item__head">Can you act as an EPC contractor only?<span class="acc-item__ic"><svg class="ic"><use href="#i-plus"/></svg></span></button>
+          <div class="acc-item__body"><p>Yes. We can deliver turnkey EPC for third-party developers, or partner as co-developer and long-term owner.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="quote reveal">
+      <div class="quote__head">
+        <span class="quote__ic"><svg class="ic"><use href="#i-send"/></svg></span>
+        <div><h3>Request a Quote</h3><p>Tell us about your project and our team will be in touch.</p></div>
+      </div>
+      <form class="quote__form" onsubmit="return false;">
+        <div class="field"><input type="text" placeholder="Full Name" aria-label="Full name"></div>
+        <div class="field"><input type="email" placeholder="Email Address" aria-label="Email"></div>
+        <div class="field"><input type="tel" placeholder="Phone Number" aria-label="Phone"></div>
+        <div class="field field--select">
+          <select aria-label="Service">
+            <option>Select Service</option>
+            <option>Solar Power</option>
+            <option>Wind Turbines</option>
+            <option>Renewable Energy</option>
+            <option>Hybrid Power</option>
+            <option>EPC Solutions</option>
+          </select>
+          <svg class="ic"><use href="#i-chevron-down"/></svg>
+        </div>
+        <div class="field field--full"><textarea rows="4" placeholder="Project details" aria-label="Project details"></textarea></div>
+        <button type="submit" class="btn btn--lime btn--block field--full">Send Request <svg class="ic"><use href="#i-arrow-right"/></svg></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSIGHTS ============ -->
+<section class="insights section section--gray" id="insights">
+  <div class="container">
+    <div class="section-head section-head--split">
+      <div>
+        <span class="eyebrow reveal">Blog &amp; Updates</span>
+        <h2 class="section-title reveal">Latest Insights</h2>
+      </div>
+      <a href="#" class="btn btn--outline reveal">All Articles <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+    </div>
+    <div class="insights__grid">
+      <article class="post reveal">
+        <div class="post__img">
+          <img src="https://images.unsplash.com/photo-1529947327457-8f5cb53bc1b6?auto=format&fit=crop&w=800&q=80" alt="Aircraft wing above clouds" loading="lazy">
+          <span class="post__date"><strong>14</strong>Oct</span>
+        </div>
+        <div class="post__body">
+          <span class="post__cat"><svg class="ic"><use href="#i-hydrogen"/></svg> Green Fuels</span>
+          <h3><a href="#">Lighthouse Green Fuels and the path to sustainable aviation</a></h3>
+          <a href="#" class="link-more">Read More <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+      <article class="post reveal" data-delay="1">
+        <div class="post__img">
+          <img src="https://images.unsplash.com/photo-1589276534126-adef63a95e05?auto=format&fit=crop&w=800&q=80" alt="Solar plant with inverter stations" loading="lazy">
+          <span class="post__date"><strong>02</strong>Oct</span>
+        </div>
+        <div class="post__body">
+          <span class="post__cat"><svg class="ic"><use href="#i-hybrid"/></svg> Hybrid</span>
+          <h3><a href="#">Why hybrid solar-wind plants deliver firmer clean power</a></h3>
+          <a href="#" class="link-more">Read More <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+      <article class="post reveal" data-delay="2">
+        <div class="post__img">
+          <img src="https://images.unsplash.com/photo-1413882353314-73389f63b6fd?auto=format&fit=crop&w=800&q=80" alt="Transmission towers" loading="lazy">
+          <span class="post__date"><strong>21</strong>Sep</span>
+        </div>
+        <div class="post__body">
+          <span class="post__cat"><svg class="ic"><use href="#i-helmet"/></svg> EPC</span>
+          <h3><a href="#">Integrated EPC: how group manufacturing shortens schedules</a></h3>
+          <a href="#" class="link-more">Read More <svg class="ic"><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="newsletter">
+      <div class="newsletter__text">
+        <span class="newsletter__ic"><svg class="ic"><use href="#i-mail"/></svg></span>
+        <div><h3>Subscribe to Our Newsletter</h3><p>Project milestones and clean energy insights, straight to your inbox.</p></div>
+      </div>
+      <form class="newsletter__form" onsubmit="return false;">
+        <input type="email" placeholder="Enter your email" aria-label="Email address">
+        <button type="submit" class="btn btn--dark">Subscribe <svg class="ic"><use href="#i-send"/></svg></button>
+      </form>
+    </div>
+
+    <div class="footer__grid">
+      <div class="footer__about">
+        <a href="#" class="brand brand--light">
+          <img src="assets/img/logo.png" alt="alfanar Power" class="brand__logo" width="1089" height="399">
+        </a>
+        <p>A new alfanar Group company dedicated to clean power, guiding the energy transition like a lighthouse guides ships home.</p>
+        <ul class="social">
+          <li><a href="#" aria-label="LinkedIn"><svg class="ic"><use href="#i-linkedin"/></svg></a></li>
+          <li><a href="#" aria-label="X"><svg class="ic"><use href="#i-x"/></svg></a></li>
+          <li><a href="#" aria-label="YouTube"><svg class="ic"><use href="#i-youtube"/></svg></a></li>
+          <li><a href="#" aria-label="Instagram"><svg class="ic"><use href="#i-instagram"/></svg></a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#solutions">Solar Power</a></li>
+          <li><a href="#solutions">Wind Turbines</a></li>
+          <li><a href="#solutions">Renewable Energy</a></li>
+          <li><a href="#solutions">Hybrid Power</a></li>
+          <li><a href="#solutions">EPC Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#footprint">Global Presence</a></li>
+          <li><a href="#insights">Insights</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Get in Touch</h4>
+        <ul class="footer__contact">
+          <li><svg class="ic"><use href="#i-pin"/></svg><span>alfanar Group HQ<br>Riyadh, Saudi Arabia</span></li>
+          <li><svg class="ic"><use href="#i-phone"/></svg><a href="tel:+966110000000">+966 11 000 0000</a></li>
+          <li><svg class="ic"><use href="#i-mail"/></svg><a href="mailto:info@alfanarpower.com">info@alfanarpower.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p>&copy; <span id="year">2026</span> alfanar Power. All rights reserved.</p>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Cookies</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg class="to-top__ring" viewBox="0 0 48 48"><circle cx="24" cy="24" r="22"/></svg>
+  <svg class="ic"><use href="#i-arrow-left"/></svg>
+</button>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
